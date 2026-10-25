@@ -1,16 +1,16 @@
 # Home-Assistant-Dashboard
 
-A wall-mounted screen with addressable buttons and RGB lighting.
+A wall-mounted tablet with addressable buttons and RGB lighting.
 
 IMAGE HERE
 
 ## What is it?
 
-This device is made to be used as a Home Assistant dashboard, which is just a wall mounted screen to show your smart home. It has 5 addressable buttons, that can be used to navigate your dashboards, and two RGB strips consisting of 6 individually controllable LED's each.
+This device is made from an old Samsung tablet and can be used as a Home Assistant dashboard. It has 5 addressable buttons for navigating your dashboards, and two RGB strips consisting of 6 individually controllable LED's each.
 
-The way the buttons work is because of the ESP32 inside of the device that the buttons are connected to. The whole device is powered by a 5v DIN-rail module that turns mains voltage into 5V. The device is cooled with a 5V laptop fan.
+The buttons and LED strips are managed by Home Assistant, this is done with the ESP32 inside of the device that has ESPHome installed on it. The whole device is powered by a 5v DIN-rail module that turns mains voltage into 5V. And the device is cooled with a 5V laptop fan.
 
-The screen is an old Samsung Tablet that has had the battery removed and is hooked up to a stepdown module delivering 4V to the tablet's battery terminals.
+The tablet has had its battery removed and is hooked up to a stepdown module delivering 4V to the tablet's battery terminals.
 
 ## Why did I make it?
 
@@ -18,7 +18,7 @@ I have always wanted an easier way to control lights and view our camera's from 
 
 ## How to assemble it?
 
-The device is made up of 2 3D-printed parts, the main case and the backplate. 
+The device is made up of 2 3D-printed parts, the main case and the backplate.
 
 ## Software
 
