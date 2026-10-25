@@ -1,0 +1,74 @@
+# Board: ESP32-C3 Super Mini (Generic)
+# Definition: definitions/boards/esp32-c3-supermini/manifest.yaml
+
+esphome:
+  name: dashboard
+  friendly_name: Dashboard
+
+esp32:
+  variant: esp32c3
+  flash_size: 4MB
+  framework:
+    type: esp-idf
+
+logger:
+
+api:
+  encryption:
+    key: REPLACE_THIS
+
+ota:
+  - platform: esphome
+
+wifi:
+  ssid: REPLACE_THIS
+  password: REPLACE_THIS
+  ap:
+    ssid: Dashboard Fallback Hotspot
+    password: REPLACE_THIS
+
+captive_portal:
+
+switch:
+  - platform: gpio
+    name: Switch 1
+    id: switch_gpio_1
+    pin: GPIO5
+  - platform: gpio
+    name: Switch 2
+    id: switch_gpio_2
+    pin: GPIO6
+  - platform: gpio
+    name: Switch 3
+    id: switch_gpio_3
+    pin: GPIO7
+  - platform: gpio
+    name: Switch 4
+    id: switch_gpio_4
+    pin: GPIO8
+  - platform: gpio
+    name: Switch 5
+    id: switch_gpio_5
+    pin: GPIO9
+
+light:
+  - platform: esp32_rmt_led_strip
+    name: LED Strip Left
+    id: light_esp32_rmt_led_strip_1
+    pin: GPIO10
+    channel_colors: GRB
+    chipset: SK6812
+    num_leds: 6
+  - platform: esp32_rmt_led_strip
+    name: LED Strip Right
+    id: light_esp32_rmt_led_strip_2
+    pin: GPIO0
+    channel_colors: GRB
+    chipset: SK6812
+    num_leds: 6
+
+output:
+  - platform: ledc
+    id: fan
+    pin: GPIO2
+    frequency: 20kHz
