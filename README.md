@@ -22,4 +22,4 @@ The device is made up of 2 3D-printed parts, the main case and the backplate.
 
 ## Software
 
-The firmware is an ESPHome config file. The way to install this onto an ESP32 is by using [web.esphome.io](https://web.esphome.io). Attach the ESP32 to your PC with a USB cable and then upload the file and after flashing it should automatically appear in Home Assistant under Devices & Services.
+The firmware is a .yaml ESPHome config file. You must first change all `CHANGE_ME` values with a random API key, the wifi credentials, and ap password. Then you should plug in the ESP32 to your pc and go to [web.esphome.io](https://web.esphome.io). Finally just upload the .yaml file and after flashing it, it should automatically appear in Home Assistant under Devices & Services.
